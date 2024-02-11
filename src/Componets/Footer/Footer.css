@@ -1,0 +1,25 @@
+.container__footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--background);
+
+}
+
+.paragraph {
+    text-align: center;
+}
+
+.footer__vertical {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    .footer__orizontal {
+      display: none;
+    }
+    .footer__vertical {
+        display: flex;
+    }
+  }

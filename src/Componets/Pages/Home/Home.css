@@ -1,0 +1,56 @@
+/* Adicione isso ao final do arquivo Home.css */
+.container {
+    display: flex;
+    padding-right: 14rem;
+    padding-left: 18rem;
+    
+    
+}
+/* Adicione isso ao final do arquivo Home.css */
+
+.textContainer {
+    text-align: justify;
+    margin-left: 20px; /* Ajuste o valor conforme necessário para a quantidade de espaço desejada */
+}
+
+/* Restante dos estilos... */
+
+.title {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.paragraph-home {
+    padding-right: 21px;
+    text-align: justify;
+}
+
+.cardsHome {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.photoCard {
+    max-height: 200px;
+    
+}
+@media only screen and (max-width: 1200px) and (min-width: 801px) {
+    .container {
+        display: flex;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        
+        
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 300px) {
+    .container {
+        display: block;
+        text-align: center;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+}
