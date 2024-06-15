@@ -1,26 +1,7 @@
 import Menu from "../../Header/Menu";
 import "../Catalog/Catalog.css";
 import Catalog from "./Catalog";
-
-// Lista de objetos com informações dos cards (substitua pelos dados reais)
-const cardsData = [
-  {
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/lab01-9ae04.appspot.com/o/Copy%20of%20Jose%20Vanderlei%20do%20Nascimento.jpg?alt=media&token=f425e902-8daf-4d72-bc86-589b60aa6ed1",
-    photographer: "Vanderlei Neto",
-    description: "Lorem, ipsum dolor sit amet.",
-  },
-  {
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/lab01-9ae04.appspot.com/o/Copy%20of%20Jose%20Vanderlei%20do%20Nascimento.jpg?alt=media&token=f425e902-8daf-4d72-bc86-589b60aa6ed1",
-    photographer: "Outro Fotógrafo",
-    description: "Outra descrição interessante.",
-  },
-  {
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/lab01-9ae04.appspot.com/o/Copy%20of%20Jose%20Vanderlei%20do%20Nascimento.jpg?alt=media&token=f425e902-8daf-4d72-bc86-589b60aa6ed1",
-    photographer: "Outro Fotógrafo",
-    description: "Outra descrição interessante.",
-  },
-  // Adicione mais objetos conforme necessário
-];
+import cardsData from '../../../assets/cardsData.json'; // Importando os dados do arquivo JSON
 
 const CatalogComponent = () => {
   return (
@@ -35,7 +16,7 @@ const CatalogComponent = () => {
             {cardsData.map((card, index) => (
               <div className="cards-box" key={index}>
                 <Catalog
-                  box-card
+                  key={index}
                   photo={card.imageUrl}
                   photographer={card.photographer}
                   description={card.description}
