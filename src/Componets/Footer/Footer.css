@@ -1,14 +1,23 @@
 .container__footer {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: var(--background);
-
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaço entre os itens */
+    background: var(--background);
+    padding: 20px;
 }
 
-
 .paragraph {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /* Centraliza o texto */
+    color: var(--words);
+    font-size: 16pt;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
 .paragraph a {
@@ -17,22 +26,63 @@
     font-weight: 700;
     transition: color 0.3s ease;
     font-size: large;
+    margin-top: 10px;
 }
 
 .paragraph a:hover {
     font-weight: 900;
 }
 
+/* Ajuste das imagens principais */
+.footer__rede-parrei img,
+.footer_katende_filmes img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.footer__orizontal img {
+    width: 400px; /* Maior para destacar */
+    height: auto;
+}
+
 .footer__vertical {
     display: none;
 }
 
-
 @media (max-width: 600px) {
     .footer__orizontal {
-      display: none;
+        display: none; /* Esconde a logo horizontal no mobile */
     }
+
     .footer__vertical {
-        display: flex;
+        display: flex; /* Mostra a logo vertical no mobile */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-  }
+
+    .container__footer {
+        flex-direction: column; /* Empilha os elementos no mobile */
+        gap: 10px; /* Reduz espaço entre elementos */
+        padding: 10px;
+    }
+
+    .paragraph {
+        font-size: 12pt;
+        margin-top: 5px;
+    }
+
+    /* Diminui as três primeiras logos (apoio) no mobile */
+    .footer__rede-parrei img,
+    .footer_katende_filmes img {
+        width: 60px; /* Reduz tamanho no mobile */
+        height: 60px;
+    }
+
+    /* Aumenta a logo do patrocinador no mobile */
+    .footer__vertical img {
+        width: 150px;
+        height: auto;
+    }
+}
