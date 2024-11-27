@@ -18,17 +18,14 @@ const CreateLogoApoio = ({imgSrc }) => {
 
 const CreateLogoPatrocinio = ({imgSrc }) => {
     return (
-      <div>
+      <div className="footer">
       <div className="container__footer">
         <img src={imgSrc} alt="" className="" />
         <div className="">
         </div>
        
       </div>
-      <div className="paragraph">
-        <p >Esse projeto foi fomentado <strong>Programa Funarte Retomada 2023 - Artes Visuais</strong></p>
-        <a  className="paragraph" href="https://vanderleineto.tech/" target="_blank">Feito por Vanderlei Neto</a>
-        </div>
+      
       </div>
     );
   };
@@ -54,7 +51,17 @@ const Footer = () => {
             <div className="footer__vertical">
             <CreateLogoPatrocinio imgSrc={logoPatrocinioVertical}/>
             </div>
-            
+            <div className="paragraph">
+        <p >Esse projeto foi fomentado <strong>Programa Funarte Retomada 2023 - Artes Visuais</strong></p>
+        <a className="paragraph" href="https://vanderleineto.tech/" target="_blank" rel="noopener noreferrer">
+  © {new Date().getFullYear()} Feito por Vanderlei Neto
+</a>
+
+        <p className="paragraph">
+         <strong><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer"> Licenciado sob a <strong>Licença MIT</strong>.</a></strong>
+        </p>
+
+        </div>
         </div>
     )
 }

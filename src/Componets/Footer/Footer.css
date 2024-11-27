@@ -1,9 +1,10 @@
+
 .container__footer {
     display: flex;
     flex-wrap: wrap; /* Permite que os itens quebrem linha */
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espaço entre os itens */
+    gap: 5px; /* Espaço entre os itens */
     background: var(--background);
     padding: 20px;
 }
@@ -16,7 +17,6 @@
     text-align: center; /* Centraliza o texto */
     color: var(--words);
     font-size: 16pt;
-    font-weight: 700;
     margin-top: 10px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .paragraph a:hover {
-    font-weight: 900;
+    color: var(--primary);
 }
 
 /* Ajuste das imagens principais */
@@ -38,11 +38,10 @@
 .footer_katende_filmes img {
     width: 100px;
     height: 100px;
-    margin: 10px;
 }
 
 .footer__orizontal img {
-    width: 400px; /* Maior para destacar */
+    width: 750px; /* Maior para destacar */
     height: auto;
 }
 
