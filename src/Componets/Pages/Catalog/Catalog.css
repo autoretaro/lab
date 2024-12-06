@@ -5,12 +5,10 @@
   
   .cards-container {
     display: flex;
-    border: solid 1px red;
     justify-content: center;
   }
   
   .cards {
-    border: solid 1px rgb(16, 195, 102);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /* Para que os cards possam envolver para a próxima linha */
@@ -19,11 +17,13 @@
   }
   
   .cards-box {
-    border: solid 1px red;
+    border: solid 1px #ccc;
+    background-color: #dbedeb;
     max-height: 320px;
     margin: 30px;
     flex: 1; /* Para que os cards tenham largura igual */
     text-align: center;
+    max-width: 302px;
   }
   
  

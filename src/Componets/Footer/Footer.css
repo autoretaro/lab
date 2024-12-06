@@ -1,13 +1,18 @@
-
 .container__footer {
     display: flex;
     flex-wrap: wrap; /* Permite que os itens quebrem linha */
     justify-content: center;
     align-items: center;
     gap: 5px; /* Espaço entre os itens */
+    padding: 30px;
     background: var(--background);
-    padding: 20px;
+    border-radius: 0.5rem;
+
+
+   
 }
+
+
 
 .paragraph {
     display: flex;
@@ -35,15 +40,19 @@
 
 /* Ajuste das imagens principais */
 .footer__rede-parrei img,
-.footer_katende_filmes img {
-    width: 100px;
-    height: 100px;
+.footer_katende_filmes img,
+.footer__orizontal img {
+    width: auto;
+    height: 100px; /* Altura fixa */
+    object-fit: contain; /* Ajusta o conteúdo sem distorção */
 }
 
-.footer__orizontal img {
-    width: 750px; /* Maior para destacar */
-    height: auto;
+img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    transition: transform 0.3s ease; /* Animação suave */
 }
+
+
 
 .footer__vertical {
     display: none;
@@ -63,7 +72,7 @@
 
     .container__footer {
         flex-direction: column; /* Empilha os elementos no mobile */
-        gap: 10px; /* Reduz espaço entre elementos */
+        gap: 20px; /* Reduz espaço entre elementos */
         padding: 10px;
     }
 
@@ -72,14 +81,15 @@
         margin-top: 5px;
     }
 
-    /* Diminui as três primeiras logos (apoio) no mobile */
+    /* Ajusta o tamanho das imagens menores no mobile */
     .footer__rede-parrei img,
     .footer_katende_filmes img {
-        width: 60px; /* Reduz tamanho no mobile */
-        height: 60px;
+        width: auto;
+        height: 60px; /* Reduz altura no mobile */
+
     }
 
-    /* Aumenta a logo do patrocinador no mobile */
+    /* Ajusta o tamanho da logo maior no mobile */
     .footer__vertical img {
         width: 150px;
         height: auto;

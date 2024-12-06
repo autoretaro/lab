@@ -6,10 +6,16 @@
 
 
 :root {
-  --background: #5CC5D1;
+  --background: linear-gradient(
+    90deg, 
+    #004d40, /* Verde-escuro */
+    #00796b, /* Verde médio */
+    #009688  /* Verde claro */
+);
   --words: #212121;
 }
 
 .bg {
   background: var(--background);
 }
+
