@@ -9,3 +9,14 @@
     
 }
 
+
+/* Classe personalizada para efeito de hover */
+.hover-scale {
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  }
+  

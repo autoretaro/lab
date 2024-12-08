@@ -38,10 +38,7 @@
     color: var(--primary);
 }
 
-/* Ajuste das imagens principais */
-.footer__rede-parrei img,
-.footer_katende_filmes img,
-.footer__orizontal img {
+.container__footer img{
     width: auto;
     height: 100px; /* Altura fixa */
     object-fit: contain; /* Ajusta o conteúdo sem distorção */
@@ -54,11 +51,19 @@ img:hover {
 
 
 
-.footer__vertical {
+.footer__vertical{
     display: none;
 }
 
 @media (max-width: 600px) {
+
+    .container__footer img{
+        width: auto;
+        height: 100px; /* Altura fixa */
+        object-fit: contain; /* Ajusta o conteúdo sem distorção */
+    }
+    
+
     .footer__orizontal {
         display: none; /* Esconde a logo horizontal no mobile */
     }

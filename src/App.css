@@ -4,18 +4,16 @@
   box-sizing: border-box;
 }
 
-
 :root {
   --background: linear-gradient(
     90deg, 
-    #004d40, /* Verde-escuro */
+    #009688, /* Verde claro */
     #00796b, /* Verde médio */
-    #009688  /* Verde claro */
-);
+    #004d40  /* Verde-escuro */
+  );
   --words: #212121;
 }
 
 .bg {
   background: var(--background);
 }
-
