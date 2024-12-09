@@ -47,8 +47,9 @@ const Footer = () => {
         <p>
           Esse projeto foi fomentado <strong>Programa Funarte Retomada 2023 - Artes Visuais</strong>
         </p>
-        <a className="paragraph" href="https://vanderleineto.tech/" target="_blank" rel="noopener noreferrer">
-          © {new Date().getFullYear()} Feito por Vanderlei Neto
+        <p className="paragraph"><strong>© Todos os direitos reservados à Rede de Desenvolvimento Quilombola Eparrei.</strong></p>
+        <a className="dev" href="https://vanderleineto.tech/" target="_blank" rel="noopener noreferrer">
+          {new Date().getFullYear()} Feito por Vanderlei Neto
         </a>
         <p className="paragraph">
           <strong>

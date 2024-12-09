@@ -35,6 +35,10 @@
 }
 
 .paragraph a:hover {
+    font-size: x-large;
+}
+
+.paragraph a:hover {
     color: var(--primary);
 }
 
@@ -83,9 +87,10 @@ img:hover {
     }
 
     .paragraph {
-        font-size: 12pt;
+        font-size: 6pt;
         margin-top: 5px;
     }
+   
 
     /* Ajusta o tamanho das imagens menores no mobile */
     .footer__rede-parrei img,
