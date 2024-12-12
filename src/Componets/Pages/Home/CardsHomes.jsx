@@ -1,23 +1,51 @@
-import autoretratoSegundaEdicao from "../../../assets/img/main/autoretrato-primeiraedicao.png";
-import '../Home/Home.css';
-import Cards from "./Cards";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import cardHomeData from "../../../assets/cargHome.json";
 
-
-
-  
-const CardsHome = () => {
+const Cards = ({ description, imgSrc, textAlt }) => {
   return (
-    <div>
-    <Cards />
-      <main>
-            <h1 className="title">Autoretrato Lab</h1>
-            <div className="cardsHome">
-            <Cards  imgSrc={autoretratoSegundaEdicao} paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
-            <Cards  imgSrc={autoretratoSegundaEdicao} paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
-            </div>
-      </main>
+    <div className="card mb-4 shadow-lg card-responsive">
+      <div className="row g-0">
+        {/* Imagem */}
+        <div className="col-md-4">
+          <img 
+            src={imgSrc} 
+            className="img-fluid h-100 rounded-start card-image" 
+            alt={textAlt} 
+          />
+        </div>
+        {/* Texto */}
+        <div className="col-md-8">
+          <div className="card-body">
+            <p className="card-text">{description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default CardsHome;
+const CardsHomes = () => {
+  return (
+    <article className="container-fluid min-vh-100 py-4">
+      {/* Título */}
+      <div className="text-center mb-4">
+        <h1 className="display-5">Autorrtrato Lab</h1>
+      </div>
+
+      {/* Lista de Cards */}
+      <div className="row justify-content-center">
+        {cardHomeData.map((data, index) => (
+          <div key={index} className="col-12 col-md-10 col-lg-8">
+            <Cards 
+              description={data.Description} 
+              imgSrc={data.imgSrc} 
+            />
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+};
+
+export default CardsHomes;

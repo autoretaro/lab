@@ -1,62 +1,52 @@
-/* Adicione isso ao final do arquivo Home.css */
-.container {
-    display: flex;
-    padding-right: 14rem;
-    padding-left: 18rem;
-    
-    
-}
-/* Adicione isso ao final do arquivo Home.css */
-
-.textContainer {
+/* Estilo base dos cards */
+.card-responsive {
+    max-width: 900px; /* Maior largura no desktop */
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Imagem */
+  .card-image {
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  
+  /* Texto */
+  .card-text {
+    font-size: 1rem; /* Tamanho padrão */
+    line-height: 1.5;
     text-align: justify;
-    margin-left: 20px; /* Ajuste o valor conforme necessário para a quantidade de espaço desejada */
-}
-
-/* Restante dos estilos... */
-
-.title {
-    padding-top: 70px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-
-.paragraph-home {
-    padding-right: 21px;
-    text-align: justify;
-}
-
-.cardsHome {
-    display: flex;
-    flex-direction: column;
-   
-}
-
-.photoCard {
-    max-height: 200px;
-    
-}
-
-@media only screen and (max-width: 800px) and (min-width: 300px) {
-    .container {
-        display: block;
-        text-align: center;
-        padding-right: 40px;
-        padding-left: 40px;
+    margin: 0;
+  }
+  
+  /* Ajustes para telas médias */
+  @media (max-width: 768px) {
+    .card-responsive {
+      max-width: 700px; /* Ligeiramente menor no tablet */
     }
-
-    .textContainer, .photoCard {
-        margin: 0 auto;
-        max-width: 100%;
-        padding: 0 10px; /* Ajuste o padding conforme necessário */
+  
+    .card-text {
+      font-size: 0.95rem; /* Texto um pouco menor */
     }
-
-    .textContainer {
-        text-align: justify;
+  }
+  
+  /* Ajustes para telas pequenas */
+  @media (max-width: 576px) {
+    .card-responsive {
+      max-width: 100%; /* Ocupa 100% no mobile */
     }
-
-    .photoCard {
-        max-height: none; /* Permite que a imagem se ajuste ao conteúdo */
-        width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+  
+    .card-image {
+      height: 200px; /* Reduz altura da imagem */
     }
-}
+  
+    .card-text {
+      font-size: 0.9rem; /* Texto menor no mobile */
+    }
+  
+    .row.g-0 {
+      flex-direction: column; /* Texto abaixo da imagem no mobile */
+    }
+  }
+  
