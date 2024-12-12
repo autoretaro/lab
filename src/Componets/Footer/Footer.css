@@ -3,16 +3,11 @@
     flex-wrap: wrap; /* Permite que os itens quebrem linha */
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Espaço entre os itens */
-    padding: 30px;
+    gap: 0.25rem; /* Reduz o espaço entre os itens */
+    padding: 1rem; /* Reduz o padding */
     background: var(--background);
     border-radius: 0.5rem;
-
-
-   
 }
-
-
 
 .paragraph {
     display: flex;
@@ -21,30 +16,26 @@
     flex-direction: column;
     text-align: center; /* Centraliza o texto */
     color: var(--words);
-    font-size: 16pt;
-    margin-top: 10px;
+    font-size: 0.875rem; /* Reduz o tamanho da fonte */
 }
 
 .paragraph a {
     color: var(--words);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     transition: color 0.3s ease;
-    font-size: large;
-    margin-top: 10px;
+    font-size: 1rem; /* Reduz o tamanho da fonte */
+    margin-top: 0.5rem; /* Reduz o espaço superior */
 }
 
 .paragraph a:hover {
-    font-size: x-large;
-}
-
-.paragraph a:hover {
+    font-size: 1.25rem; /* Ajusta o tamanho da fonte ao passar o mouse */
     color: var(--primary);
 }
 
-.container__footer img{
+.container__footer img {
     width: auto;
-    height: 100px; /* Altura fixa */
+    height: 5rem; /* Reduz a altura fixa */
     object-fit: contain; /* Ajusta o conteúdo sem distorção */
 }
 
@@ -53,21 +44,22 @@ img:hover {
     transition: transform 0.3s ease; /* Animação suave */
 }
 
+.footer__orizontal img {
+    width: 35rem; /* Reduz a largura fixa */
+    height: 15rem; /* Ajusta a altura */
+    object-fit: contain; /* Ajusta o conteúdo sem distorção */
+}
 
-
-
-.footer__vertical{
+.footer__vertical {
     display: none;
 }
 
 @media (max-width: 600px) {
-
-    .container__footer img{
+    .container__footer img {
         width: auto;
-        height: 100px; /* Altura fixa */
+        height: 5rem; /* Reduz a altura fixa */
         object-fit: contain; /* Ajusta o conteúdo sem distorção */
     }
-    
 
     .footer__orizontal {
         display: none; /* Esconde a logo horizontal no mobile */
@@ -82,27 +74,25 @@ img:hover {
 
     .container__footer {
         flex-direction: column; /* Empilha os elementos no mobile */
-        gap: 20px; /* Reduz espaço entre elementos */
-        padding: 10px;
+        gap: 0.75rem; /* Reduz espaço entre elementos */
+        padding: 0.5rem; /* Reduz o padding */
     }
 
     .paragraph {
-        font-size: 6pt;
-        margin-top: 5px;
+        font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+        margin-top: 0.25rem; /* Reduz o espaço superior */
     }
-   
 
     /* Ajusta o tamanho das imagens menores no mobile */
     .footer__rede-parrei img,
     .footer_katende_filmes img {
         width: auto;
-        height: 60px; /* Reduz altura no mobile */
-
+        height: 3rem; /* Reduz altura no mobile */
     }
 
     /* Ajusta o tamanho da logo maior no mobile */
     .footer__vertical img {
-        width: 150px;
+        width: 7.5rem; /* Ajusta a largura */
         height: auto;
     }
 }

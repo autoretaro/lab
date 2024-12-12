@@ -36,15 +36,7 @@
     max-height: 200px;
     
 }
-@media only screen and (max-width: 1200px) and (min-width: 801px) {
-    .container {
-        display: flex;
-        padding-right: 3rem;
-        padding-left: 3rem;
-        
-        
-    }
-}
+
 @media only screen and (max-width: 800px) and (min-width: 300px) {
     .container {
         display: block;
@@ -53,4 +45,18 @@
         padding-left: 40px;
     }
 
+    .textContainer, .photoCard {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0 10px; /* Ajuste o padding conforme necessário */
+    }
+
+    .textContainer {
+        text-align: justify;
+    }
+
+    .photoCard {
+        max-height: none; /* Permite que a imagem se ajuste ao conteúdo */
+        width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
 }

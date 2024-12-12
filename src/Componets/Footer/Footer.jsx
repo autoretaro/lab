@@ -5,20 +5,21 @@ import logoRedeEparrei from "../../assets/img/main/Rede_eparrei.png";
 import logoEparreiFilmes from "../../assets/img/main/Eparrei_filmes.png";
 import logoKatende from "../../assets/img/main/Logo_katende.png";
 
-const CreateLogoApoio = ({ imgSrc }) => {
+const textAlt = "Logos Funaate, Ministerio da Cultura, Governo Federal";
+const CreateLogoApoio = ({ imgSrc, alt }) => {
   return (
     <div className="container__footer">
-      <img src={imgSrc} alt="" className="" />
+      <img src={imgSrc} alt={alt} className="" />
       <div className=""></div>
     </div>
   );
 };
 
-const CreateLogoPatrocinio = ({ imgSrc }) => {
+const CreateLogoPatrocinio = ({ imgSrc, textAlt }) => {
   return (
     <div className="footer">
       <div className="container__footer">
-        <img src={imgSrc} alt="" className="" />
+        <img src={imgSrc} alt={textAlt} />
         <div className=""></div>
       </div>
     </div>
@@ -27,21 +28,21 @@ const CreateLogoPatrocinio = ({ imgSrc }) => {
 
 const Footer = () => {
   return (
-    <div className="container__footer">
+    <footer className="container__footer">
       <div className="footer__rede-parrei">
-        <CreateLogoApoio imgSrc={logoRedeEparrei} />
+        <CreateLogoApoio imgSrc={logoRedeEparrei}  alt="Logo da Rede de Desenovolvimento Quilombola Eparrei"/>
       </div>
       <div className="footer__rede-parrei">
-        <CreateLogoApoio imgSrc={logoEparreiFilmes} />
+        <CreateLogoApoio imgSrc={logoEparreiFilmes} alt="Logo da Eaprrei Filmes"/>
       </div>
       <div className="footer_katende_filmes">
         <CreateLogoApoio imgSrc={logoKatende} />
       </div>
       <div className="footer__orizontal">
-        <CreateLogoPatrocinio imgSrc={logoPatrocinioOrizonal} />
+        <CreateLogoPatrocinio imgSrc={logoPatrocinioOrizonal}  className="logoPatrocinioOrizontal" />
       </div>
       <div className="footer__vertical">
-        <CreateLogoPatrocinio imgSrc={logoPatrocinioVertical} />
+        <CreateLogoPatrocinio imgSrc={logoPatrocinioVertical} alt={textAlt}/>
       </div>
       <div className="paragraph">
         <p>
@@ -52,14 +53,10 @@ const Footer = () => {
           {new Date().getFullYear()} Feito por Vanderlei Neto
         </a>
         <p className="paragraph">
-          <strong>
-            <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
-              Licenciado sob a <strong>Licença MIT</strong>.
-            </a>
-          </strong>
+          
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

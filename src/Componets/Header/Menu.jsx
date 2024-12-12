@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import './Menu.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "../../assets/img/main/Autoretrato.svg";
+import logo from "../../assets/img/main/Autorretrato-logo.svg";
 
 function Menu() {
   return (

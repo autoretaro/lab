@@ -5,12 +5,7 @@
 }
 
 :root {
-  --background: linear-gradient(
-    90deg, 
-    #009688, /* Verde claro */
-    #00796b, /* Verde médio */
-    #004d40  /* Verde-escuro */
-  );
+  --background: #5CC5D1;
   --words: #212121;
 }
 
