@@ -5,10 +5,10 @@ function App() {
 
   return (
       <div>
-        <AppRoutes />
-        <footer>
+        <main>
+          <AppRoutes />
+        </main>
           <Footer />
-        </footer>
       </div>
   )
 }

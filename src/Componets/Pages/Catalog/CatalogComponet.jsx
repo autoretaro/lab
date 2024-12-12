@@ -8,7 +8,7 @@ const Catalog = ({ photo, photographer, description }) => {
     <div className="box-cards">
       <img src={photo || '/path/to/placeholder.jpg'} alt={`${photographer || 'Unknown'}'s work`} className="photoCard" />
       <h4>{photographer || 'Unknown Photographer'}</h4>
-      <p>{description || 'No description available.'}</p>
+      {/* <p>{description || 'No description available.'}</p> */}
     </div>
   );
 };
@@ -16,15 +16,13 @@ const Catalog = ({ photo, photographer, description }) => {
 Catalog.propTypes = {
   photo: PropTypes.string.isRequired,
   photographer: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  // description: PropTypes.string.isRequired,
 };
 
 const CatalogComponent = () => {
   return (
     <div>
-      <header>
         <Menu />
-      </header>
       <article>
         <h1 className="title">Autoretrato Lab</h1>
         <div className="container">
@@ -34,7 +32,6 @@ const CatalogComponent = () => {
                 <Catalog
                   photo={card.imageUrl}
                   photographer={card.photographer}
-                  description={card.description}
                   alt={`${card.texAlt}'s work`}
                 />
               </div>

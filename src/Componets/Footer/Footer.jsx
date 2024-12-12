@@ -17,12 +17,12 @@ const CreateLogoApoio = ({ imgSrc, alt }) => {
 
 const CreateLogoPatrocinio = ({ imgSrc, textAlt }) => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="container__footer">
         <img src={imgSrc} alt={textAlt} />
         <div className=""></div>
       </div>
-    </div>
+    </footer>
   );
 };
 

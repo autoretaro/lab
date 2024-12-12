@@ -6,10 +6,15 @@ import { Link } from 'react-router-dom';
 import './Menu.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../../assets/img/main/Autorretrato-logo.svg";
+import { SlSocialInstagram } from "react-icons/sl";
+import { FaMeta } from "react-icons/fa6";
+
+
 
 function Menu() {
   return (
     <header>
+      <nav>
       <Navbar expand="lg" className="bg">
         <Container>
           <Navbar.Brand as={Link} to="/">
@@ -51,22 +56,23 @@ function Menu() {
                 <NavDropdown.Item
                   href="https://www.instagram.com"
                   target="_blank"
-                  className="fs-5 text-dark fw-bold hover-scale"
+                  className="fs-5 text-dark "
                 >
-                  <i className="fab fa-instagram"></i> Instagram
+                  <SlSocialInstagram className='fw-bold hover-scale' size={35}/>
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   href="https://www.facebook.com"
                   target="_blank"
-                  className="fs-5 text-dark fw-bold hover-scale"
+                  className="fs-5 text-dark "
                 >
-                  <i className="fab fa-facebook"></i> Facebook
+                  <FaMeta className='fw-bold hover-scale' size={35}/>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      </nav>
     </header>
   );
 }
